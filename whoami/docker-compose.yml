@@ -1,0 +1,16 @@
+version: '3'
+services:
+  whoami:
+    image: jwilder/whoami
+    expose:
+      - "8000"
+    environment:
+      - VIRTUAL_HOST=whoami.tumit.ga
+      - VIRTUAL_PORT=8000
+      - LETSENCRYPT_HOST=whoami.tumit.ga
+      - LETSENCRYPT_EMAIL=tumit@odds.team
+
+networks:
+  default:
+    name: one-for-all
+    external: true
