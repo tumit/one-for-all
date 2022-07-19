@@ -9,8 +9,4 @@ services:
       - VIRTUAL_PORT=8000
       - LETSENCRYPT_HOST=whoami.tumit.ga
       - LETSENCRYPT_EMAIL=tumit@odds.team
-
-networks:
-  default:
-    name: one-for-all
-    external: true
+    network_mode: bridge
