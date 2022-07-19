@@ -2,6 +2,7 @@ version: '3'
 services:
   whoami:
     image: jwilder/whoami
+    container_name: whoami
     expose:
       - "8000"
     environment:
